@@ -1,12 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-
-  <title>#(title)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HuaHeihei</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400&family=Source+Sans+Pro:wght@500&family=Khula:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-
 <body>
-  <h1>#(title)</h1>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="/" class="logo">HuaHeihei</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/recipes">Recipes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/cart">Cart</a></li>
+                    <li><a href="/signup">Sign-up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 style="color: #FFFFFF;">Welcome to HuaHeihei</h1>
+                <p>Discover the finest quality, nutritious, and ethically sourced chicken eggs.</p>
+                <a href="/shop" class="btn-primary">Shop Now</a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="about" class="section-about">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <img src="/images/farm.jpg" alt="Farm">
+                    <p>At HuaHeihei, we are dedicated to providing the highest quality chicken eggs that are both nutritious and ethically sourced. Our commitment to quality and sustainability sets us apart as a trusted brand in the industry.</p>
+                </div>
+            </div>
+        </section>
+        <section id="products" class="section-products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="/images/egg-pastured-6.jpg" alt="Pastured Eggs">
+                        <h3>Pastured Eggs</h3>
+                        <p>Our Pastured Eggs come from hens that roam freely in lush pastures, enjoying a diet rich in natural forage. This results in eggs with a vibrant yolk, rich flavor, and superior nutritional benefits.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/images/egg-organic-6.png" alt="Organic Eggs">
+                        <h3>Organic Eggs</h3>
+                        <p>Our Organic Eggs are laid by hens fed with certified organic feed, free from synthetic pesticides and fertilizers. These eggs are the highest of quality, with a wholesome taste.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/images/egg-free-range-6.jpg" alt="Free Range Eggs">
+                        <h3>Free Range Eggs</h3>
+                        <p>Our Free-Range Eggs are produced by hens with access to outdoor spaces, allowing them to stretch their wings and forage for natural food. These eggs offer a fresh, natural taste and are packed with essential nutrients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section-contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or would like to get in touch with us, please don't hesitate to contact us through the form below or via email.</p>
+                <form id="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" pattern="[A-Za-z]+" title="Please input letters only" maxlength="100" required>
+                
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" maxlength="100" required>
+                
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" maxlength="500" required></textarea>
+                
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+                <div id="form-feedback" class="feedback"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Email us!</h3>
+                <p>Email us anytime via <a href="mailto:huaheihei@gmail.com">huaheihei@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Burma Road, Johnsonville, Wellington 6035</p>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <p>Stay updated with our latest news and offers.</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        // Display feedback to the user
+        const feedback = document.getElementById('form-feedback');
+        feedback.textContent = 'Your message has been sent successfully!';
+        
+        // Clear the form fields
+        this.reset();
+    });
+</script>
 </body>
 </html>
