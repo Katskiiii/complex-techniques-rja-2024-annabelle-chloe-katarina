@@ -11,7 +11,15 @@
     <div class="container">
         <h1>Sign Up for HuaHeihei</h1>
         <form action="/signup" method="POST">
-           
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" pattern="[A-Za-z]+" title="Please input letters only" maxlength="100">
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" pattern="[A-Za-z]+" title="Please input letters only" maxlength="100" required>
+            
+            <label for="phone-number">Phone Number</label>
+            <input type="text" id="phone-number" name="phone_number" pattern="\d{1,15}" title="Please input a valid phone number (up to 15 digits)" maxlength="15" required>
+            
             <label for="email">Email</label>
             <input type="email" id="email" name="email" maxlength="100" required>
             
